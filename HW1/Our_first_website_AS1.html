@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>College Parking Reservation</title>
+</head>
+
+<body>
+    <header>
+        <h1>College Parking Reservation</h1>
+    </header>
+
+    <section class="reservation-form">
+        <h2>Reservation Form</h2>
+        <form action="#" method="post" onsubmit="reserveParking(event)">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="parkingLot">Select Parking Lot:</label>
+            <select id="parkingLot" name="parkingLot" required onchange="updateAvailableSlots()">
+                <option value="lotA">Lot A</option>
+                <option value="lotB">Lot B</option>
+                <option value="lotC">Lot C</option>
+            </select>
+
+            <label for="reservationTime">Reservation Time:</label>
+            <input type="datetime-local" id="reservationTime" name="reservationTime" required>
+
+            <button type="submit" class="reserve-button">Reserve Parking</button>
+            <button type="button" onclick="removeReservation()">Remove Reservation</button>
+            <button type="reset" class="clear-button">Clear Form</button>
+        </form>
+    </section>
+
+   
+
+    <section class="reservation-table">
+        <h2>Reservations</h2>
+        <table id="reservationTable">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Parking Lot</th>
+                    <th>Reservation Time</th>
+                    <th>Parking Slot</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section class="information">
+        <h2>Important Information</h2>
+        <p class="small-text">Please note that parking reservations are on a first-come, first-served basis.</p>
+        <p class="medium-text">Make sure to arrive at your reserved parking slot on time.</p>
+        <p class="large-text">Violation of parking rules may result in penalties.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 College Parking Reservation</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

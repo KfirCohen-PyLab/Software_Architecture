@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>student info</title>
+	<link rel="stylesheet" href="studentInfo.css">
+	<script src="studentInfo.js"></script>
+	<script src="printSaveStudentInfo.js"></script>
+  </head>
+  <body>
+    <h1>Students Information</h1>
+    <h3>Please insert your information</h3>
+    <form id="studentInfo">
+	<table>
+		<tr><td>
+			Id: <input type="text" id="id" name="id">
+		</td></tr>
+	   <tr>
+	      <td>
+			First name: <input type="text" id="fname" name="fname">
+	      </td>
+	      <td>
+			Last name: <input type="text" id="lname" name="lname">
+	      </td>
+	   </tr>
+	   <tr><td>
+			Address: <input type="text" id="addr" name="addr" value="unknown">
+	   </td></tr>
+	   <tr>
+	     <td>What is your favorite programming language?</td>
+	     <td>
+			<select id="lang" name="lang">
+			  <option value="js">javaScript</option>
+			  <option value="html">HTML</option>
+			  <option value="assembly">assembly</option>
+			  <option value="python">python</option>
+			</select>
+	     </td>
+	   </tr>
+	   <tr>
+	     <td>
+			How do you evaluate your knowlage in it?
+	     </td>
+	     <td>
+			<input type="radio" id="low" name="knowlage" value="low">low
+			<input type="radio" id="medium" name="knowlage" value="medium">medium
+			<input type="radio" id="high" name="knowlage" value="high">high
+	     </td>
+	   </tr>
+	</table></br></br>
+	<input type="button" value="send" onclick="verifyInput()"></br></br>
+	<input type="button" value="cleanForm" onclick="cleanForm()"></br></br>
+	<input type="button" value="getAllStudents" onclick="getAllStudent()"></br></br>
+	Id to remove: <input type="text" id="removeId" name="removeId">
+	<input type="button" value="remove" onclick="removeIdFunc()"></br></br>
+	<p id="res"></p>
+    </form>
+  </body>
+</html>
